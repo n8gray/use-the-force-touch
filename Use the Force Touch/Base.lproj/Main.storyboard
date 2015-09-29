@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,48 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Force:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsk-n5-lkP">
+                                <rect key="frame" x="20" y="206" width="560" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="e5w-Fh-Xin"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radius:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVM-93-7JC">
+                                <rect key="frame" x="20" y="152" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tro-gW-IlQ">
+                                <rect key="frame" x="18" y="285" width="564" height="31"/>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jsk-n5-lkP" firstAttribute="trailing" secondItem="tro-gW-IlQ" secondAttribute="trailing" id="40g-ci-BJQ"/>
+                            <constraint firstItem="Jsk-n5-lkP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4hR-gK-EdC"/>
+                            <constraint firstItem="tro-gW-IlQ" firstAttribute="top" secondItem="Jsk-n5-lkP" secondAttribute="bottom" constant="59" id="Du1-vM-0yr"/>
+                            <constraint firstItem="Jsk-n5-lkP" firstAttribute="top" secondItem="zVM-93-7JC" secondAttribute="bottom" constant="33" id="F4F-QQ-Mua"/>
+                            <constraint firstItem="Jsk-n5-lkP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="206" id="JPK-4k-ydM"/>
+                            <constraint firstItem="Jsk-n5-lkP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KQ1-Od-1U8"/>
+                            <constraint firstItem="Jsk-n5-lkP" firstAttribute="leading" secondItem="zVM-93-7JC" secondAttribute="leading" id="iBD-3W-Mbx"/>
+                            <constraint firstItem="Jsk-n5-lkP" firstAttribute="leading" secondItem="tro-gW-IlQ" secondAttribute="leading" id="tpM-od-NdS"/>
+                            <constraint firstItem="Jsk-n5-lkP" firstAttribute="trailing" secondItem="zVM-93-7JC" secondAttribute="trailing" id="zms-g6-wGJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="forceLabel" destination="Jsk-n5-lkP" id="x49-qA-I12"/>
+                        <outlet property="radiusLabel" destination="zVM-93-7JC" id="Gdx-aj-PcE"/>
+                        <outlet property="slider" destination="tro-gW-IlQ" id="7Bz-YK-AoA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="475" y="584"/>
         </scene>
     </scenes>
 </document>

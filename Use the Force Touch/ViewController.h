@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *radiusLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *forceLabel;
+
+@property (weak, nonatomic) IBOutlet UISlider *slider;
 
 @end
 
