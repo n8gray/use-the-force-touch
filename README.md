@@ -1,4 +1,4 @@
 # Use the Force, Touch
 A little 3D Touch demo app
 
-Displays the force and radius of a UITouch.  Also tracks the number of distinct levels that have been detected.
+Fire it up and push on the screen!  Displays the force and radius of your touch.  Also tracks the number of distinct levels that have been detected.
